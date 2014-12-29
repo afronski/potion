@@ -6,7 +6,10 @@ defmodule Potion.Mixfile do
       app: :potion,
       version: "0.0.1",
       elixir: "~> 1.0",
-      deps: deps
+      deps: deps,
+      escript: [
+        main_module: ExamplePotion
+      ]
     ]
   end
 

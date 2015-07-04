@@ -10,7 +10,7 @@ When solution will pass prepared test suite, your active assignment will be mark
 
 ## How to build and run it?
 
-1. `mix escript.build`
+1. `MIX_ENV=prod mix escript.build`
 2. `./potion`
 3. Move around menu, choose proper option and start playing with assignments!
 

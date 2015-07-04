@@ -21,11 +21,11 @@ defmodule Potion.UI.Controls.Window do
 
   def draw(window) do
     Window.lines(window) |> Enum.each(fn line ->
-      IO.puts format(window.colors) <> line
+      IO.puts format(window.colors) <> line <> unformat
     end)
   end
 
-  defp prepare_title(%Window{colors: colors, width: width, title: title}) do
+  defp prepare_title(%Window{width: width, title: title}) do
     fill = round((width - String.length(title)) / 2)
     String.duplicate(" ", fill) <> title <> String.duplicate(" ", fill)
   end
@@ -41,5 +41,9 @@ defmodule Potion.UI.Controls.Window do
     foreground = apply(IO.ANSI, String.to_atom(colors.foreground), [])
 
     background <> foreground
+  end
+
+  defp unformat do
+    IO.ANSI.default_background() <> IO.ANSI.default_color()
   end
 end

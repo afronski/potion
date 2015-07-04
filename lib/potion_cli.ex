@@ -16,7 +16,10 @@ defmodule Potion.CLI do
   end
 
   defp decide(:help, name) do
-    Window.new(80, 20)
+    Window.new(69)
+    |> Window.add_content("TASK #1")
+    |> Window.add_content("TASK #2")
+    |> Window.add_content("TASK #3")
     |> Window.title(name)
     |> Window.draw
 

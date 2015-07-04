@@ -1,5 +1,5 @@
 defmodule ExamplePotion do
   def main(args) do
-    Potion.CLI.run("Example Potion", args)
+    Potion.CLI.run("EXAMPLE POTION", args)
   end
 end

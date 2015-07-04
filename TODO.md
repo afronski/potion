@@ -2,7 +2,7 @@
 
 ## Phase I
 
-- [ ] `ncurses`-like UI.
+- [x] `ncurses`-like UI.
 - [ ] Menu interaction.
 - [ ] Markdown command line renderer.
 

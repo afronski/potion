@@ -2,6 +2,7 @@
 /_build
 /deps
 *.ez
+potion
 
 # Dumps:
 erl_crash.dump

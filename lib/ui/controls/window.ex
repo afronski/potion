@@ -37,9 +37,8 @@ defmodule Potion.UI.Controls.Window do
   end
 
   def draw(window) do
-    IO.ANSI.clear()
+    IO.puts IO.ANSI.clear() <> IO.ANSI.home()
 
-    empty_line
     empty_line(window)
 
     Window.lines(window) |> Enum.each(fn line ->
@@ -97,7 +96,6 @@ defmodule Potion.UI.Controls.Window do
     padding(size) <> content <> padding(size)
   end
 
-  defp empty_line, do: IO.puts("")
   defp empty_line(%Window{colors: colors, margin: size, padding: padding} = window) do
     IO.puts margin(size) <> format(colors) <> padded(String.duplicate(" ", get_width(window)), padding) <> unformat
   end
